@@ -1,0 +1,101 @@
+.navHeader{
+    margin: 0px;
+    width: 100%;
+    height: 75px;
+    /* background-color: aqua; */
+    box-shadow:  rgb(99 99 99 / 20%) 0px 2px 8px 0px;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 10;
+}
+.topHeader_div{
+    display: flex;
+    max-width: 1400px;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    /* text-align: center; */
+    justify-content: space-between;
+}
+.topHeader_logo{
+    align-items: center;
+    /* margin-left: 15px; */
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: left;
+}
+.topHeader_logo img{
+    cursor: pointer;
+    height: 75px;
+    margin-left: 15px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+.topHeader_buttons{
+    display: flex;
+    text-align: right !important;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    
+}
+.topHeader_button{
+    margin: 0px 0.5rem;
+    min-width: 100px;
+    padding: 4px;
+    transition: all 0.1s ease-in 0s;
+    border: 3px solid rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+    box-shadow: rgb(255, 255, 255) -5px -5px 0px -2px;
+}
+.topHeader_button_1{
+    margin: 0px 0.5rem;
+    min-width: 100px;
+    padding: 4px;
+    transition: all 0.1s ease-in 0s;
+    border: 3px solid rgb(255, 209, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: rgb(255 209 0) -5px -5px 0px -2px;
+}
+.topHeader_button_1 p{
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 26px;
+}
+.topHeader_button:hover{
+    border: 3px solid rgb(255, 209, 0);
+    backdrop-filter: blur(10px);
+    box-shadow: rgb(255 209 0) -5px -5px 0px -2px;
+}
+
+.topHeader_button p{
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-align: center;
+
+    font-family: Poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 26px;
+}
+
+.topHeader_flag{
+    padding: 0px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.topHeader_flag img{
+    width: 36px;
+    height: 36px;
+    object-fit: cover;
+    border-radius: 36px;
+}

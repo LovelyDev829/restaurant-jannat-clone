@@ -1131,9 +1131,9 @@ const reducer = (state = initState, action) => {
     console.log(action.payload);
     switch (action.type) {
         case 'PLUS': {
-            state.titleList.map(tiEl => {
+            state?.titleList?.forEach(tiEl => {
                 if (tiEl.tiId === action.tiId) {
-                    tiEl.list.map(el => {
+                    tiEl.list?.forEach(el => {
                         if (el.dishId === action.id) {
                             if (el.dishCount === 0) state.countDish++;
                             el.dishCount++;
@@ -1147,9 +1147,9 @@ const reducer = (state = initState, action) => {
             return { ...state };
         }
         case 'MINUS': {
-            state.titleList.map(tiEl => {
+            state?.titleList?.forEach(tiEl => {
                 if (tiEl.tiId === action.tiId) {
-                    tiEl.list.map(el => {
+                    tiEl.list?.forEach(el => {
                         if (el.dishId === action.id) {
                             if (el.dishCount !== 0) el.dishCount--;
                             if (el.dishCount === 0) state.countDish--;

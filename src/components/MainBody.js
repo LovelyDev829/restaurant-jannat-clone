@@ -91,28 +91,26 @@ export function MainBody() {
     }
     function display_right(tiEl){
         return (
-            tiEl.list.map((el) => {
-                if (el.dishCount) {
-                    return (
-                        <div className='mainYourCart_item' key={"key004" + tiEl.tiId + "/" + el.dishId}>
-                            <div className='mainYourCart_item_dish'>{el.dishName}</div>
-                            <div className='mainYourCart_item_count'>
-                                <AiOutlineMinus className='mainYourCart_item_count_symbolM' onClick={
-                                    function () {
-                                        minusClick(tiEl.tiId, el.dishId);
-                                    }
-                                } />
-                                <div className='mainYourCart_item_countNumber'>{el.dishCount}</div>
-                                <AiOutlinePlus className='mainYourCart_item_count_symbolP' onClick={
-                                    function () {
-                                        plusClick(tiEl.tiId, el.dishId);
-                                    }
-                                } />
-                            </div>
-                            <div className='mainYourCart_item_price'>€{Number(el.dishCount * el.dishPrice).toFixed(2)}</div>
+            tiEl?.list?.map((el) => {
+                return (
+                    <div className={el.dishCount? 'mainYourCart_item' : 'hidden'} key={"key004" + tiEl.tiId + "/" + el.dishId}>
+                        <div className='mainYourCart_item_dish'>{el.dishName}</div>
+                        <div className='mainYourCart_item_count'>
+                            <AiOutlineMinus className='mainYourCart_item_count_symbolM' onClick={
+                                function () {
+                                    minusClick(tiEl.tiId, el.dishId);
+                                }
+                            } />
+                            <div className='mainYourCart_item_countNumber'>{el.dishCount}</div>
+                            <AiOutlinePlus className='mainYourCart_item_count_symbolP' onClick={
+                                function () {
+                                    plusClick(tiEl.tiId, el.dishId);
+                                }
+                            } />
                         </div>
-                    )
-                }
+                        <div className='mainYourCart_item_price'>€{Number(el.dishCount * el.dishPrice).toFixed(2)}</div>
+                    </div>
+                )
             })
         )
     }
